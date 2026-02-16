@@ -7,15 +7,9 @@ Usage:
   python get_paper.py --pmid 12345678 --format summary  # Human-readable
 """
 
-import sys
-from pathlib import Path
-
-# Add skills directory to path for shared imports
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-
 import argparse
 import json
-from shared.api_client import api_get
+from api_client import api_get
 
 
 def main():

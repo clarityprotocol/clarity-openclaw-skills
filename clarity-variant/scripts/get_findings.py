@@ -7,15 +7,9 @@ Usage:
   python get_findings.py --fold-id 1 --agent-type structural  # Specific agent
 """
 
-import sys
-from pathlib import Path
-
-# Add skills directory to path for shared imports
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-
 import argparse
 import json
-from shared.api_client import api_get
+from api_client import api_get
 
 
 def main():
