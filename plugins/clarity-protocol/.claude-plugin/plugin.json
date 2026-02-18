@@ -1,0 +1,11 @@
+{
+  "name": "clarity-protocol",
+  "description": "Query protein folding research data from Clarity Protocol. Search variants, literature, clinical annotations, and AI agent findings for neurodegenerative disease research.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Clarity Protocol"
+  },
+  "homepage": "https://clarityprotocol.io",
+  "repository": "https://github.com/clarityprotocol/clarity-openclaw-skills",
+  "license": "MIT"
+}

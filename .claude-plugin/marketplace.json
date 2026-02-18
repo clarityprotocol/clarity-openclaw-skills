@@ -1,0 +1,25 @@
+{
+  "name": "clarity-skills",
+  "owner": {
+    "name": "Clarity Protocol"
+  },
+  "metadata": {
+    "description": "Protein folding research skills for Claude Code — query variants, literature, clinical data, and agent findings from Clarity Protocol",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "clarity-protocol",
+      "source": "./plugins/clarity-protocol",
+      "description": "Query protein folding research data from Clarity Protocol. Includes skills for searching variants, literature, clinical data, and AI agent findings across neurodegenerative disease research.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Clarity Protocol"
+      },
+      "homepage": "https://clarityprotocol.io",
+      "repository": "https://github.com/clarityprotocol/clarity-openclaw-skills",
+      "license": "MIT",
+      "keywords": ["protein-folding", "research", "bioinformatics", "alzheimers", "neurodegenerative", "alphafold", "clinvar", "pubmed"]
+    }
+  ]
+}
