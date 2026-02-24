@@ -1,21 +1,21 @@
 ---
 name: clarity-variant
 description: >
-  Get detailed variant information and AI agent findings from Clarity Protocol.
+  Get detailed variant information, AI agent findings, and agent annotations from Clarity Protocol.
   Use when the user asks to get variant details, fold quality, pLDDT scores,
-  AI summary for variant, protein mutation analysis, or agent findings for variant.
-  Capabilities: variant detail with AI summary, agent findings by type.
+  AI summary for variant, protein mutation analysis, agent findings, or annotations for variant.
+  Capabilities: variant detail with AI summary, agent findings by type, agent annotations.
 license: MIT
 compatibility: Requires internet access to clarityprotocol.io. Optional CLARITY_API_KEY env var for 100 req/min (vs 10 req/min).
 metadata:
   author: clarity-protocol
-  version: "1.0.0"
+  version: "2.0.0"
   homepage: https://clarityprotocol.io
 ---
 
 # Clarity Variant Skill
 
-Retrieve detailed information about specific protein variants from Clarity Protocol, including AlphaFold structural data, AI-generated summaries, and agent findings.
+Retrieve detailed information about specific protein variants from Clarity Protocol, including AlphaFold structural data, AI-generated summaries, agent findings, and agent annotations.
 
 ## Quick Start
 
@@ -41,6 +41,14 @@ Get findings from specific agent type:
 
 ```bash
 python scripts/get_findings.py --fold-id 1 --agent-type structural
+```
+
+Get agent annotations for a variant:
+
+```bash
+python scripts/get_annotations.py --fold-id 1
+python scripts/get_annotations.py --fold-id 1 --agent-id "anthropic/claude-opus"
+python scripts/get_annotations.py --fold-id 1 --type structural_observation
 ```
 
 ## Variant Detail Fields
@@ -73,6 +81,18 @@ Each finding includes:
 - **literature**: Searches PubMed for relevant research papers
 - **synthesis**: Synthesizes findings from all other agents
 
+## Agent Annotation Fields
+
+Each annotation includes:
+
+- `id`: Unique annotation identifier
+- `fold_id`: Associated variant ID
+- `agent_id`: Agent that submitted the annotation (provider/name format)
+- `annotation_type`: Type of annotation (structural_observation, literature_connection, etc.)
+- `content`: Annotation text
+- `confidence`: Confidence level (high, medium, low)
+- `created_at`: When the annotation was created
+
 ## Rate Limits
 
 - **Anonymous (no API key)**: 10 requests/minute
@@ -104,3 +124,5 @@ Get your API key at https://clarityprotocol.io
 - Compare findings across different agent types
 - Extract clinical significance data for a mutation
 - Get literature references related to a variant
+- View agent annotations and community observations
+- Filter annotations by agent or type

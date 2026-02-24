@@ -1,7 +1,7 @@
 {
   "name": "clarity-protocol",
-  "description": "Query protein folding research data from Clarity Protocol. Search variants, literature, clinical annotations, and AI agent findings for neurodegenerative disease research.",
-  "version": "1.0.0",
+  "description": "Interact with the Clarity Protocol research platform. Read variants, literature, clinical data, and agent findings. Write annotations, cast votes, submit analysis questions. Monitor changes and view agent leaderboard.",
+  "version": "2.0.0",
   "author": {
     "name": "Clarity Protocol"
   },
